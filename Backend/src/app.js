@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
+import messageRouter from  ".routes/messageRouter";
+
 
 dotenv.config();
 
@@ -23,5 +25,7 @@ app.use(
     credentials: true,
   })
 );
+
+app.use('/api/v1/message',messageRouter);
 
 export default app;
