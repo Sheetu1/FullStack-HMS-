@@ -4,5 +4,5 @@
  connectDB();
 
  app.listen(config.port, () => {
-    console.log(`server is running on ${config.port} port`);
+    console.log(`Server is Running On ${config.port} Port`);
  })
