@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import validator from 'express-validator'
+import validator from 'validator'
 
 const messageSchema = new mongoose.Schema({
     firstName:{
@@ -31,4 +31,5 @@ const messageSchema = new mongoose.Schema({
 
 })
 
-export default Message = mongoose.model('Message',messageSchema);
+const messageModel = mongoose.model('Message',messageSchema);
+export default messageModel;

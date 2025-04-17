@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-import messageRouter from  ".routes/messageRouter";
+import messageRouter from  "./routes/messageRouter.js";
+import {errorMiddleware} from './middleware/errorMiddleware.js'
 
 
 dotenv.config();
@@ -27,5 +28,6 @@ app.use(
 );
 
 app.use('/api/v1/message',messageRouter);
+app.use(errorMiddleware);
 
 export default app;
